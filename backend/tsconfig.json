@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "outDir": "./dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "typeRoots" : ["./@types", "./node_modules/@types"]
+    },
+    "files": [
+      "./node_modules/dotenv/config.js"
+    ],
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+}
+  
