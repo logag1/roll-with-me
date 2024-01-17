@@ -40,9 +40,8 @@ const options = {
   ca: fs.readFileSync(sslPath('ca_bundle.crt'))
 }
 const server = https.createServer(options, app);
-const PORT = 443;
 
-server.listen(PORT, () => logger.info(`Server listen at port ${PORT}`));
+server.listen(process.env.SERVERPORT!, () => logger.info(`Server listen at port ${process.env.SERVERPORT!}`));
 
 mongoose.set("strictQuery", true);
 mongoose.connect(process.env.MONGOURL!);
